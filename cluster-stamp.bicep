@@ -1725,7 +1725,6 @@ resource mc 'Microsoft.ContainerService/managedClusters@2023-02-02-preview' = {
         maxPods: 30
         availabilityZones: [
           '1'
-          '2'
           '3'
         ]
         upgradeSettings: {
