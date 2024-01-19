@@ -1670,14 +1670,14 @@ resource mc 'Microsoft.ContainerService/managedClusters@2023-02-02-preview' = {
     agentPoolProfiles: [
       {
         name: 'npsystem'
-        count: 3
+        count: 1
         vmSize: 'Standard_D2a_v4'
         osDiskSizeGB: 80
         osDiskType: 'Ephemeral'
         osType: 'Linux'
         osSKU: 'Ubuntu'
-        minCount: 3
-        maxCount: 4
+        minCount: 1
+        maxCount: 1
         vnetSubnetID: targetVirtualNetwork::snetClusterNodes.id
         enableAutoScaling: true
         enableCustomCATrust: false
@@ -1703,14 +1703,14 @@ resource mc 'Microsoft.ContainerService/managedClusters@2023-02-02-preview' = {
       }
       {
         name: 'npuser01'
-        count: 2
-        vmSize: 'Standard_DS3_v2'
+        count: 1
+        vmSize: 'Standard_D2a_v4'
         osDiskSizeGB: 120
         osDiskType: 'Ephemeral'
         osType: 'Linux'
         osSKU: 'Ubuntu'
-        minCount: 2
-        maxCount: 5
+        minCount: 1
+        maxCount: 2
         vnetSubnetID: targetVirtualNetwork::snetClusterNodes.id
         enableAutoScaling: true
         enableCustomCATrust: false
